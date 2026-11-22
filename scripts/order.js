@@ -49,14 +49,6 @@ ymaps.ready(() => {
     new ymaps.SuggestView('from');
     new ymaps.SuggestView('to');
 
-    // Логика выбора размера посылки
-    sizes.forEach(element => {
-        element.addEventListener('click', () => {
-            sizes.forEach((c) => c.classList.toggle('is-active', c.dataset.value === element.dataset.value));
-            renderInfo();
-        })
-    });
-
     // Логика выбора размера посылки и скорости доставки
     [sizes, speeds].forEach(group => {
         group.forEach(element => {
